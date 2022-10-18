@@ -40,6 +40,8 @@ Available on:
   http://127.0.0.1:8080
 Hit CTRL-C to stop the server
 ```
+
+## Sponsors 
 **SHOUT OUT TO OUR SPONSORS & SUPPORTERS!** <br />
 ![image](https://user-images.githubusercontent.com/38635290/191865582-703c0075-3c10-4378-8186-be808c332c69.png) <br />
 ![image](https://user-images.githubusercontent.com/38635290/191865565-258d22a4-a1e9-44e4-b32d-af1721facf0e.png) <br />
