@@ -15,6 +15,10 @@ npm i http-server -g
 ```
 http-server .
 ```
+
+## Usage
+Visit 127.0.0.1:8080/KEK_Web3_Websockets_Testbed.html in your browser! 
+
 ## Example HTML Output
 ![image](https://user-images.githubusercontent.com/12779751/196534113-c85b2183-255b-4719-87d5-77387c0a8d86.png)
 
