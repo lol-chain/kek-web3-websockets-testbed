@@ -22,8 +22,8 @@
 async function initialize() {
     const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://ws.kekchain.com'));
     $("#blockNumber").html(await web3.eth.getBlockNumber());
-    return console.log(await web3.eth.getBlockNumber()) 
     // add more web3 interactions below
+    return console.log(await web3.eth.getBlockNumber()) 
 }initialize();
 </script>
 </body>
