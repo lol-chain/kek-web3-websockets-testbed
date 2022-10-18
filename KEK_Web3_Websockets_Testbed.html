@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kekchain (WSS) Websockets Testbed</title>
+</head>
+<body>
+<div class="container">
+    <center>
+    <label for="blockNumber" class="col-lg-2 control-label">Block Height: </label>
+    <span id="blockNumber" type="text"></span>
+    <br>
+    </center>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+
+<script>
+
+async function initialize() {
+    const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://ws.kekchain.com'));
+    $("#blockNumber").html(await web3.eth.getBlockNumber());
+    return console.log(await web3.eth.getBlockNumber()) 
+    // add more web3 interactions below
+}initialize();
+</script>
+</body>
