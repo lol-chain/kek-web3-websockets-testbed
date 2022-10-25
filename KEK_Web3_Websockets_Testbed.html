@@ -15,22 +15,15 @@
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js" integrity="sha512-FDcVY+g7vc5CXANbrTSg1K5qLyriCsGDYCE02Li1tXEYdNQPvLPHNE+rT2Mjei8N7fZbe0WLhw27j2SrGRpdMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 
 <script>
 
-    // Your code here...
-    console.log(ethers.getDefaultProvider());
 async function initialize() {
-	// ethers WebSocketProvider
-	const provider = await new ethers.providers.WebSocketProvider("wss://ws.kekchain.com")
-	
-	const { chainId } = await provider.getNetwork()
-	console.log(chainId) // 420420
-	console.log(provider);
-	$("#blockNumber").html(await provider.getBlockNumber());
-    // add more ethersJs interactions below
-   return console.log(await provider.getBlockNumber()) 
+    const web3 = new Web3(new Web3.providers.WebsocketProvider('wss://ws.kekchain.com'));
+    $("#blockNumber").html(await web3.eth.getBlockNumber());
+    // add more web3 interactions below
+    return console.log(await web3.eth.getBlockNumber()) 
 }initialize();
 </script>
 </body>

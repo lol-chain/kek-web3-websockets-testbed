@@ -20,10 +20,9 @@
 <script>
 
     // Your code here...
-	console.log(ethers.getDefaultProvider());
+    console.log(ethers.getDefaultProvider());
 async function initialize() {
-	// A Web3Provider wraps a standard Web3 provider, which is
-	// what MetaMask injects as window.ethereum into each page
+	// ethers WebSocketProvider
 	const provider = await new ethers.providers.WebSocketProvider("wss://ws.kekchain.com")
 	
 	const { chainId } = await provider.getNetwork()
